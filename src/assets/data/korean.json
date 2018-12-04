@@ -136,7 +136,8 @@
             "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/D6uC_Yltuy0Kq_bWNOvDXA/o.jpg",
             "is_closed": false,
             "url": "https://www.yelp.com/biz/bewon-ann-arbor-2?adjust_creative=r7kX4wD-m44LJurnScOgwQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=r7kX4wD-m44LJurnScOgwQ",
-            "review_count": 118,
+            "eventsId": [],
+            "review_count": 118,            
             "categories": [
                 {
                     "alias": "korean",
@@ -174,6 +175,7 @@
             "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/4tuCRA9rBrA0Zi1H-rPdNg/o.jpg",
             "is_closed": false,
             "url": "https://www.yelp.com/biz/seoul-street-ann-arbor?adjust_creative=r7kX4wD-m44LJurnScOgwQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=r7kX4wD-m44LJurnScOgwQ",
+            "eventsId": [],
             "review_count": 337,
             "categories": [
                 {
@@ -213,6 +215,7 @@
             "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/S7a8LNd9jrvEo7tdixX7og/o.jpg",
             "is_closed": false,
             "url": "https://www.yelp.com/biz/arirang-ann-arbor?adjust_creative=r7kX4wD-m44LJurnScOgwQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=r7kX4wD-m44LJurnScOgwQ",
+            "eventsId": [],
             "review_count": 160,
             "categories": [
                 {
@@ -251,6 +254,7 @@
             "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/uGerY8PF5wMCKjsuT-AakQ/o.jpg",
             "is_closed": false,
             "url": "https://www.yelp.com/biz/rich-j-c-korean-restaurant-ann-arbor-2?adjust_creative=r7kX4wD-m44LJurnScOgwQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=r7kX4wD-m44LJurnScOgwQ",
+            "eventsId": [],
             "review_count": 144,
             "categories": [
                 {
@@ -289,6 +293,7 @@
             "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/P7LbR9B_QaxszCUCQAU3iw/o.jpg",
             "is_closed": false,
             "url": "https://www.yelp.com/biz/one-bowl-asian-cuisine-ann-arbor-4?adjust_creative=r7kX4wD-m44LJurnScOgwQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=r7kX4wD-m44LJurnScOgwQ",
+            "eventsId": [],
             "review_count": 112,
             "categories": [
                 {
@@ -334,6 +339,7 @@
             "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/LsMZVJAiCrXHKsCc77iqmQ/o.jpg",
             "is_closed": false,
             "url": "https://www.yelp.com/biz/belly-deli-ann-arbor?adjust_creative=r7kX4wD-m44LJurnScOgwQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=r7kX4wD-m44LJurnScOgwQ",
+            "eventsId": [],
             "review_count": 172,
             "categories": [
                 {
@@ -379,6 +385,7 @@
             "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/W64N_PKkI0lGNEVJ8-fPdA/o.jpg",
             "is_closed": false,
             "url": "https://www.yelp.com/biz/kangs-korean-restaurant-ann-arbor-3?adjust_creative=r7kX4wD-m44LJurnScOgwQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=r7kX4wD-m44LJurnScOgwQ",
+            "eventsId": [],
             "review_count": 147,
             "categories": [
                 {
@@ -417,6 +424,7 @@
             "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/IricmQShTmGS8QPx-NNuQA/o.jpg",
             "is_closed": false,
             "url": "https://www.yelp.com/biz/broadway-cafe-and-hoagie-ann-arbor?adjust_creative=r7kX4wD-m44LJurnScOgwQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=r7kX4wD-m44LJurnScOgwQ",
+            "eventsId": [],
             "review_count": 107,
             "categories": [
                 {
@@ -459,6 +467,7 @@
             "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/AOtRBUB0Q9gocZu5O_MSPg/o.jpg",
             "is_closed": false,
             "url": "https://www.yelp.com/biz/bells-diner-ann-arbor?adjust_creative=r7kX4wD-m44LJurnScOgwQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=r7kX4wD-m44LJurnScOgwQ",
+            "eventsId": [],
             "review_count": 146,
             "categories": [
                 {
@@ -501,6 +510,7 @@
             "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/EKGSSONUuUahIhewwRJogA/o.jpg",
             "is_closed": false,
             "url": "https://www.yelp.com/biz/hana-korean-restaurant-ypsilanti?adjust_creative=r7kX4wD-m44LJurnScOgwQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=r7kX4wD-m44LJurnScOgwQ",
+            "eventsId": [],
             "review_count": 103,
             "categories": [
                 {
@@ -539,6 +549,7 @@
             "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/g_sld6LK-AV6MnyoItXOlA/o.jpg",
             "is_closed": false,
             "url": "https://www.yelp.com/biz/seoul-garden-ann-arbor?adjust_creative=r7kX4wD-m44LJurnScOgwQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=r7kX4wD-m44LJurnScOgwQ",
+            "eventsId": [],
             "review_count": 259,
             "categories": [
                 {
@@ -584,6 +595,7 @@
             "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/dRlbQbSrNTp0tcyEDG_9gA/o.jpg",
             "is_closed": false,
             "url": "https://www.yelp.com/biz/macheko-grill-ypsilanti?adjust_creative=r7kX4wD-m44LJurnScOgwQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=r7kX4wD-m44LJurnScOgwQ",
+            "eventsId": [],
             "review_count": 120,
             "categories": [
                 {
@@ -625,6 +637,7 @@
             "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/JrLNUAE8H_yq9fIn0L5jag/o.jpg",
             "is_closed": false,
             "url": "https://www.yelp.com/biz/kosmo-ann-arbor?adjust_creative=r7kX4wD-m44LJurnScOgwQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=r7kX4wD-m44LJurnScOgwQ",
+            "eventsId": [],
             "review_count": 114,
             "categories": [
                 {
@@ -668,6 +681,7 @@
             "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/AiAPX-10IcCVvAdVvAQYDA/o.jpg",
             "is_closed": false,
             "url": "https://www.yelp.com/biz/panda-korean-and-chinese-foods-ann-arbor?adjust_creative=r7kX4wD-m44LJurnScOgwQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=r7kX4wD-m44LJurnScOgwQ",
+            "eventsId": [],
             "review_count": 62,
             "categories": [
                 {
@@ -710,6 +724,7 @@
             "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/4jbEh-EwBN4RzaApULbZtA/o.jpg",
             "is_closed": false,
             "url": "https://www.yelp.com/biz/mama-satto-ann-arbor-2?adjust_creative=r7kX4wD-m44LJurnScOgwQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=r7kX4wD-m44LJurnScOgwQ",
+            "eventsId": [],
             "review_count": 50,
             "categories": [
                 {
@@ -752,6 +767,7 @@
             "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/_chnbV3pOtYN3j8NZ4gDuQ/o.jpg",
             "is_closed": false,
             "url": "https://www.yelp.com/biz/bopjib-ann-arbor-3?adjust_creative=r7kX4wD-m44LJurnScOgwQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=r7kX4wD-m44LJurnScOgwQ",
+            "eventsId": [],
             "review_count": 2,
             "categories": [
                 {
@@ -789,6 +805,7 @@
             "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/mUoY5xsV-jk4sxfWFYvbKQ/o.jpg",
             "is_closed": false,
             "url": "https://www.yelp.com/biz/teriyaki-time-ann-arbor?adjust_creative=r7kX4wD-m44LJurnScOgwQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=r7kX4wD-m44LJurnScOgwQ",
+            "eventsId": [],
             "review_count": 49,
             "categories": [
                 {
