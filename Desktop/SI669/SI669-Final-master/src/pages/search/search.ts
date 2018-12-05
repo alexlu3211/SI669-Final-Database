@@ -11,28 +11,36 @@ import { RestaurantEntry } from '../../model/restaurant-entry';
 })
 export class SearchPage {
 
-  private restaurantEntries: RestaurantEntry[];
+  private restaurantEntries: {"korean": RestaurantEntry[], 
+                "chinese": RestaurantEntry[], 
+                "mexican": RestaurantEntry[], 
+                "indian": RestaurantEntry[]} = {
+                "korean": [], 
+                "chinese": [], 
+                "mexican": [], 
+                "indian": []}
 
   constructor(public navCtrl: NavController, 
   			      public navParams: NavParams,
               public dataProvider: DataProvider) {
 
-    this.dataProvider.loadDummyRestaurantEntries();
+    this.dataProvider.loadRestaurantEntries();
 
     this.dataProvider.getRestaurantObservable().subscribe(update => {
-      this.restaurantEntries = dataProvider.getRestaurantEntries();
-      console.log(this.restaurantEntries);
+      this.restaurantEntries.korean = dataProvider.getRestaurantEntries("korean");
+      this.restaurantEntries.chinese = dataProvider.getRestaurantEntries("chinese");
+      this.restaurantEntries.mexican = dataProvider.getRestaurantEntries("mexican");
+      this.restaurantEntries.indian = dataProvider.getRestaurantEntries("indian");
     })
-  }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SearchPage');
+    console.log(this.restaurantEntries);
+
   }
 
   pushRestaurantListPage(cuisine: string) {
   	this.navCtrl.push(RestaurantListPage, {
 		  cuisine: cuisine,
-      restaurantEntries: this.restaurantEntries
+      restaurantEntries: this.restaurantEntries[cuisine]
 	  });
   }
 

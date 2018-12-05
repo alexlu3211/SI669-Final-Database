@@ -11,18 +11,20 @@ import { ProfilePage } from '../pages/profile/profile';
 import { SchedulePage } from '../pages/schedule/schedule';
 import { TabsPage } from '../pages/tabs/tabs';
 
+
 import { LoginPage } from '../pages/login/login';
 
 import { RestaurantListPageModule } from '../pages/restaurant-list/restaurant-list.module';
+import { RestaurantDetailPageModule } from '../pages/restaurant-detail/restaurant-detail.module';
+import { RestaurantSchedulePageModule } from '../pages/restaurant-schedule/restaurant-schedule.module';
 import { ProfileEditPageModule } from '../pages/profile-edit/profile-edit.module';
 import { SignupPageModule } from '../pages/signup/signup.module';
+import { ScheduleDetailPageModule } from '../pages/schedule-detail/schedule-detail.module';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Camera } from '@ionic-native/camera';
 
-import { RestaurantDataProvider } from '../providers/restaurant-data/restaurant-data';
-import { ProfileDataProvider } from '../providers/profile-data/profile-data';
 import { DataProvider } from '../providers/data/data';
 
 
@@ -35,12 +37,14 @@ import { DataProvider } from '../providers/data/data';
     SchedulePage,
     TabsPage,
     LoginPage
+
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     IonicStorageModule.forRoot(),
     IonicModule.forRoot(MyApp, {
+      mode: 'ios',
       backButtonText: '',
       iconMode: 'md',
       // modalEnter: 'modal-slide-in',
@@ -49,8 +53,12 @@ import { DataProvider } from '../providers/data/data';
       pageTransition: 'ios'
     }),
     RestaurantListPageModule,
+    RestaurantDetailPageModule,
+    RestaurantSchedulePageModule,
     ProfileEditPageModule,
-    SignupPageModule
+    SignupPageModule,
+    ScheduleDetailPageModule
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -59,16 +67,16 @@ import { DataProvider } from '../providers/data/data';
     PeoplePage,
     ProfilePage,
     SchedulePage,
+
     TabsPage,
     LoginPage
+
   ],
   providers: [
     StatusBar,
     SplashScreen,
     Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    RestaurantDataProvider,
-    ProfileDataProvider,
     DataProvider
   ]
 })

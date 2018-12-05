@@ -18,24 +18,29 @@ export class PeoplePage {
 
   username: string = '';
   profileEntry: ProfileEntry[] = [];
+  myprofileEntry: ProfileEntry;
+
+  availability = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public dataProvider: DataProvider, private alertCtrl: AlertController) {
     this.username = dataProvider.getUserName();
     console.log(this.username);
-    // this.profileEntry = new ProfileEntry[];
+    this.myprofileEntry = new ProfileEntry();
 
-
-    this.dataProvider.loadDummyProfileEntries();
+    // this.dataProvider.loadDummyProfileEntries();
     this.dataProvider.getProfileObservable().subscribe(update => {
       this.profileEntry = dataProvider.getProfileEntries();
+      this.myprofileEntry = dataProvider.getProfileByUsername(this.username);
+      this.profileEntry.shift();
       console.log("people page", this.profileEntry);
     })
-
   }
 
-  private setupschedule(){
+  private setupschedule(username: string){
+      console.log("Check this username" + username)
       let alert = this.alertCtrl.create({
       title: "Do you want to eat with this user?",
+      // template: '<center><img src="https://randomuser.me/api/portraits/men/32.jpg"/></center>',
       buttons: [
         {  
           text:  "No",
@@ -57,10 +62,16 @@ export class PeoplePage {
             });
     alert_second.present();    
           }
-          // role: "yes"
         }
       ]
     });
+    alert.addInput({
+      type: 'image',
+      label: 'https://randomuser.me/api/portraits/men/32.jpg',
+      value: 'value1',
+      checked: true
+    });
+
     alert.present();    
   }
 

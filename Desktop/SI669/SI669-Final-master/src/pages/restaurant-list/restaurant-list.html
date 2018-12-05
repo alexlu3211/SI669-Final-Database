@@ -1,4 +1,4 @@
-<ion-header no-border>
+<ion-header>
 
   <ion-navbar>
     <ion-title>{{ cuisine }} List</ion-title>
@@ -9,28 +9,28 @@
 
 <ion-content padding>
 
-	<ion-card *ngFor="let restaurant of restaurantEntries">
+	<ion-card *ngFor="let restaurant of restaurantEntries" (click)=goToDetail(restaurant)>
 		<div class="image-holder">
 			<img src="{{ restaurant.image_url }}"/>
 
 			<ion-chip class="appointment" color="primary">
-			  <ion-label>3 events are coming up!</ion-label>
+			  <ion-label> {{ restaurant.eventsId?.length || 0 }} events are coming up!</ion-label>
 			</ion-chip>
 		</div>
 		<ion-card-content>
-		<ion-card-title>
-		  {{ restaurant.name }}
-		</ion-card-title>
+			<ion-card-title>
+			  {{ restaurant.name }}
+			</ion-card-title>
 
-		<p>{{ restaurant.location.display_address }}</p>
+			<p>{{ restaurant.location.display_address }}</p>
 
-		<p>{{ restaurant.price }} &middot; {{ restaurant.rating }} &#9733; </p>
+			<p>{{ restaurant.price }} &middot; {{ restaurant.rating }} &#9733; </p>
 
-		<div class="chips">
-			<ion-chip *ngFor="let category of restaurant.categories">
-			  <ion-label>{{ category.title}}</ion-label>
-			</ion-chip>
-		</div>	
+			<div class="chips">
+				<ion-chip *ngFor="let category of restaurant.categories">
+				  <ion-label>{{ category.title}}</ion-label>
+				</ion-chip>
+			</div>	
 
 		</ion-card-content>
 	</ion-card>

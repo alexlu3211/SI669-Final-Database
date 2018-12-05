@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-import { ProfileDataProvider } from '../../providers/profile-data/profile-data';
 import { DataProvider } from '../../providers/data/data';
 
 import { ProfileEditPage } from '../profile-edit/profile-edit';
@@ -15,10 +14,14 @@ const SPINNER_IMAGE: string = "/assets/imgs/spinner.gif";
   selector: 'page-profile',
   templateUrl: 'profile.html',
 })
-export class ProfilePage {
+export class ProfilePage implements OnInit{
 
   username: string = '';
   profileEntry: ProfileEntry;
+
+  allergyLength: number = 0;
+  preferenceLength: number = 0;
+
   private image = PLACEHOLDER_IMAGE;
 
   constructor(public navCtrl: NavController, 
@@ -30,18 +33,27 @@ export class ProfilePage {
     this.profileEntry = new ProfileEntry();
 
 
-    this.dataProvider.loadDummyProfileEntries();
     this.dataProvider.getProfileObservable().subscribe(update => {
       this.profileEntry = dataProvider.getProfileByUsername(this.username);
-      console.log("here", this.profileEntry);
+
+      this.allergyLength = this.profileEntry.allergy.length;
+      this.preferenceLength = this.profileEntry.preference.length;
+
     })
   }
 
-  private editEntry(entryID: number) {
-    console.log("editing entry ", entryID);
-    this.navCtrl.push(ProfileEditPage, {"entryID": entryID});
+  ngOnInit(){
+    this.dataProvider.loadProfileEntries();
+    this.profileEntry = this.dataProvider.getProfileByUsername(this.username);
+
+    this.allergyLength = this.profileEntry.allergy.length;
+    this.preferenceLength = this.profileEntry.preference.length;
   }
 
-
-
+  private editEntry(entryID: number) {
+    this.navCtrl.push(ProfileEditPage, {
+      "username": this.username,
+      "profileEntry": this.profileEntry
+    });
+  }
 }

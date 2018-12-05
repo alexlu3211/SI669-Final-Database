@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Schedule Detail</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-content>
+      <ion-row>
+        <ion-col col-3>
+          <img class="host-picture" src="{{ dataProvider.getProfilePicByUsername(eventEntry.hostId) }}"/>
+        </ion-col>
+
+        <ion-col col-9>
+          <h2> {{ dataProvider.getProfileByUsername(eventEntry.hostId).name }}'s Event </h2>
+          <h3> <ion-icon name="alarm"></ion-icon> {{ eventEntry.date | date:'short'}} </h3>
+          <p> <ion-icon ios="ios-at-outline" md="md-at"></ion-icon> {{ dataProvider.getRestaurantName(eventEntry.restaurantId) }} </p>
+          <p> "{{ eventEntry.memo }}"</p>
+         
+
+          <p class="label-participants"> There are {{ eventEntry.participantsId?.length }} people in this event </p>
+
+          <ion-row>
+            <div class="guest-picture-container">
+          
+
+            <img *ngFor="let participantId of eventEntry.participantsId"
+               class="guest-picture" 
+               src="{{ dataProvider.getProfilePicByUsername(participantId) }}" />
+            </div>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+
+
+
+
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>

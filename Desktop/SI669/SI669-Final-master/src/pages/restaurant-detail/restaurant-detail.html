@@ -1,0 +1,75 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title> Schedules </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	
+	<ion-card>
+		<div class="image-holder">
+			<img src="{{ restaurantEntry.image_url }}"/>
+		</div>
+		<ion-card-content>
+			<ion-card-title>
+			  {{ restaurantEntry.name }}
+			</ion-card-title>
+		</ion-card-content>
+	</ion-card>
+
+	<h1 class="subtitle">{{ restaurantEntry.eventsId?.length }} events are upcoming</h1>
+
+	<ion-card *ngFor="let event of currentEventEntries">
+		<ion-card-content>
+			<ion-row>
+				<ion-col col-3>
+					<img class="host-picture" src="{{ dataProvider.getProfilePicByUsername(event.hostId) }}"/>
+				</ion-col>
+
+				<ion-col col-9>
+					<h2> {{ dataProvider.getProfileByUsername(event.hostId).name }}'s Event </h2>
+					<h3> <ion-icon name="alarm"></ion-icon> {{ event.date | date:'short'}} </h3>
+					<p> "{{ event.memo }}"</p>
+					
+					<p class="label-participants"> There are {{ event.participantsId?.length }} people in this event </p>
+					<ion-row>
+						<div class="guest-picture-container">
+						<img *ngFor="let participantId of event.participantsId"
+							 class="guest-picture" 
+							 src="{{ dataProvider.getProfilePicByUsername(participantId) }}" />
+						</div>
+					</ion-row>
+				</ion-col>
+			</ion-row>
+
+
+
+		</ion-card-content>
+
+	</ion-card>
+
+
+<!-- *ngFor="let entry of eventEntry" -->
+<!-- 	<ion-card *ngFor="let entry of eventEntry">
+		<ion-card-content>
+			<ion-grid>
+			  <ion-row>
+			    <ion-col>
+			    	<img [src]="profileEntry.pic">
+			    	<p> {{entry.hostId}} </p>
+			    </ion-col>
+			    <ion-col>
+			    	<p> # of participants: {{entry.participantsId.length}} </p>
+			        <p> Date: {{entry.date}} </p>
+			        <p> Participants: {{entry.participantsId}} </p>
+			    </ion-col>
+			  </ion-row>
+			</ion-grid>
+			<button ion-button (click)="joinSchedule(entry.hostId)">Join this party</button>
+		</ion-card-content>
+	</ion-card> -->
+	<button ion-button (click)="createSchedule(restaurantEntry.name)">Make your own schedule</button>
+</ion-content>

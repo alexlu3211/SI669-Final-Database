@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DataProvider } from '../../providers/data/data';
 
 import { RestaurantEntry } from '../../model/restaurant-entry';
+import { RestaurantDetailPage } from '../restaurant-detail/restaurant-detail';
 
 @IonicPage()
 @Component({
@@ -22,10 +23,14 @@ export class RestaurantListPage {
 		this.cuisine = this.navParams.get("cuisine");
 	 	this.restaurantEntries = this.navParams.get("restaurantEntries");
 
+	 	console.log(this.restaurantEntries)
+
 	}
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad RestaurantListPage');
-  }
+	private goToDetail(restaurant: RestaurantEntry){
+		this.navCtrl.push(RestaurantDetailPage, {
+			restaurantEntry: restaurant
+		});
+	}
 
 }
